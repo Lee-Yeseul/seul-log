@@ -1,7 +1,11 @@
+import CardList from '@/components/cardList'
+
 export default function Home() {
   return (
-    <main id="root" className="h-screen bg-purple-300">
-      home
-    </main>
+    <section className="flex w-full justify-center pt-10">
+      <div className="w-3/4">
+        <CardList />
+      </div>
+    </section>
   )
 }
