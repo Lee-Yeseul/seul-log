@@ -4,7 +4,7 @@ import GithubIcon from '@/public/assets/icons/github.svg'
 
 export default function Footer() {
   return (
-    <footer className="w-full border-t-2 border-solid border-gray-200 py-5 text-sm">
+    <footer className="border-t-1 w-full border-solid border-gray-300 py-5 text-sm">
       <div className="flex flex-col items-center gap-2">
         <div className="flex gap-2">
           <Link href="https://github.com/Lee-Yeseul">

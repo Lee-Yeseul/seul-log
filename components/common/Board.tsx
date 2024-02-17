@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import matter from 'gray-matter'
-import testImage from '@/public/assets/images/default_image.jpg'
+import testImage from '@/public/assets/images/default_image.png'
 import Card from './Card'
 import { getPostBlobData } from '@/api/github-rest-api'
 import { formatDateToLongString } from '@/utils'
@@ -44,9 +44,7 @@ export default async function Board({ sha, title }: BoardProps) {
               {metaTitle}
             </h6>
             <p className="text-sm text-gray-500">
-              {summary
-                ? summary
-                : 'mental models ar simple expression of complex processes orrelationships'}
+              {summary ? summary : metaTitle}
             </p>
             <div className="mt-4 flex gap-2 text-xs font-bold">
               {tags.map((value: string, index: number) => (

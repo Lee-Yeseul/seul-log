@@ -16,7 +16,7 @@ export default function Tag({ value, index }: TagProps) {
 
   return (
     <div
-      className={`rounded-full px-2.5 py-1 text-sm font-semibold ${tagPalette[index]}`}
+      className={`rounded-lg px-2.5 py-1 text-sm font-semibold ${tagPalette[index]}`}
     >
       {value}
     </div>
