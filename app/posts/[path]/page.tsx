@@ -3,9 +3,14 @@ import MarkdownContent from '@/components/common/MarkdownContent'
 import Tag from '@/components/common/Tag'
 import { formatDateToLongString } from '@/utils'
 import matter from 'gray-matter'
-
 interface PostDetailProps {
   params: { path: string }
+}
+
+export async function generateMetadata({ params: { path } }: PostDetailProps) {
+  return {
+    title: path,
+  }
 }
 
 export default async function Post({ params: { path } }: PostDetailProps) {

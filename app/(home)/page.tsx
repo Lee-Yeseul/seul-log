@@ -1,6 +1,10 @@
 import { getRawPosts } from '../../api/github-rest-api'
 import Board from '@/components/common/Board'
 
+export const metadata = {
+  title: 'Home',
+}
+
 export default async function Home() {
   const posts = await getRawPosts()
   if (!Array.isArray(posts)) return
