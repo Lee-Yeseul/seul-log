@@ -9,14 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "gray-matter": "^4.0.3",
     "next": "14.1.0",
+    "octokit": "^3.1.2",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-markdown": "^9.0.1",
+    "react-syntax-highlighter": "^15.5.0",
+    "rehype-raw": "^7.0.0"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-syntax-highlighter": "^15.5.11",
     "@typescript-eslint/eslint-plugin": "^7.0.1",
     "@typescript-eslint/parser": "^7.0.1",
     "autoprefixer": "^10.0.1",
