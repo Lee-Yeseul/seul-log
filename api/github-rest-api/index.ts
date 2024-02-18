@@ -11,7 +11,7 @@ const octokit = new Octokit({
 
 export const getRawPosts = async (path: string = 'blog') => {
   try {
-    const response = await octokit.rest.repos.getContent({
+    const { data } = await octokit.rest.repos.getContent({
       mediaType: {
         format: 'raw',
       },
@@ -22,8 +22,7 @@ export const getRawPosts = async (path: string = 'blog') => {
         revalidate: revalidateInterval,
       },
     })
-
-    return response.data
+    return data
   } catch (err) {
     console.log(err)
   }
