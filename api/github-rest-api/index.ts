@@ -3,7 +3,7 @@ import { Octokit } from 'octokit'
 const gitAccessToken = process.env.GIT_ACCESS_TOKEN
 const owner = process.env.OWNER ?? ''
 const repo = process.env.REPO_NAME ?? ''
-const revalidateInterval = process.env.REVALIDATE_INTERVAL ?? 3600
+// const revalidateInterval = process.env.REVALIDATE_INTERVAL ?? 3600
 
 const octokit = new Octokit({
   auth: gitAccessToken,
@@ -18,9 +18,10 @@ export const getRawPosts = async (path: string = 'blog') => {
       owner,
       repo,
       path,
-      next: {
-        revalidate: revalidateInterval,
-      },
+      'Cache-Control': 'no-store no-cache must-revalidate',
+      // next: {
+      //   revalidate: revalidateInterval,
+      // },
     })
     return data
   } catch (err) {
@@ -34,9 +35,10 @@ export const getPostBlobData = async (sha: string) => {
       owner,
       repo,
       file_sha: sha,
-      next: {
-        revalidate: revalidateInterval,
-      },
+      'Cache-Control': 'no-store no-cache must-revalidate',
+      // next: {
+      //   revalidate: revalidateInterval,
+      // },
     })
     return data
   } catch (err) {
