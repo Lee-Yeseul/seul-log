@@ -7,12 +7,14 @@ import Head from 'next/head'
 
 const inter = Inter({ subsets: ['latin'] })
 
+const blogName = 'SEUL'
+
 export const metadata: Metadata = {
   title: {
-    template: '%s | YESEUL Log',
-    default: 'YESEUL Log',
+    template: `%s | ${blogName} Log`,
+    default: `${blogName} Log`,
   },
-  description: "frontend developer yeseul's blog",
+  description: "frontend developer seul's blog",
 }
 
 export default function RootLayout({

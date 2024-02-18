@@ -3,10 +3,10 @@ import ArrowOutward from '@/public/assets/icons/arrow_outward.svg'
 
 export default function Header() {
   return (
-    <header className="border-b-1 fixed left-0 top-0 z-10 h-16 w-full border-solid border-gray-300 bg-white">
+    <header className="fixed left-0 top-0 z-10 h-16 w-full border-b-1 border-solid border-gray-300 bg-white">
       <div className="flex h-full items-center justify-between px-10">
         <Link href="/" className="text-xl font-bold">
-          YESEUL Log
+          SEUL Log
         </Link>
         <Link
           href="https://yeseul-portfolio.vercel.app/"
