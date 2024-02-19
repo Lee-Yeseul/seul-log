@@ -16,6 +16,8 @@ export default async function Board({ sha, title }: BoardProps) {
   const postingTitle = title.slice(0, -3)
   const blobData = await getPostBlobData(sha)
 
+  if (!blobData) return
+
   const markdownContent = Buffer.from(blobData.content, 'base64').toString(
     'utf-8',
   )
