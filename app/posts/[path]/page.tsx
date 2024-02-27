@@ -1,14 +1,17 @@
 import { getRawPosts } from '@/api/github-rest-api'
-import CommentInput from '@/components/comment/CommentInput'
-import CommentList from '@/components/comment/CommentList'
 import MarkdownContent from '@/components/common/MarkdownContent'
 import Tag from '@/components/common/Tag'
 import { formatDateToLongString } from '@/utils'
 import matter from 'gray-matter'
+import dynamic from 'next/dynamic'
 
 interface PostDetailProps {
   params: { path: string }
 }
+
+const DynamicCommentBox = dynamic(() => import('@/components/comment'), {
+  ssr: false,
+})
 
 export async function generateMetadata({ params: { path } }: PostDetailProps) {
   return {
@@ -43,11 +46,7 @@ export default async function Post({ params: { path } }: PostDetailProps) {
           </div>
         </article>
         <hr className="my-20 h-px bg-gray-300 sm:w-3/4 md:w-3/4 lg:w-3/5 xl:w-1/2 "></hr>
-        <section className="sm:w-3/4 md:w-3/4 lg:w-3/5 xl:w-1/2">
-          <div className="text-xl font-bold">댓글 3개</div>
-          <CommentInput />
-          <CommentList />
-        </section>
+        <DynamicCommentBox path={path} />
       </section>
     </>
   )
