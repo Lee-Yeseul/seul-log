@@ -1,9 +1,9 @@
 import { Octokit } from 'octokit'
 
-const gitAccessToken = process.env.GIT_ACCESS_TOKEN
-const owner = process.env.OWNER ?? ''
-const repo = process.env.REPO_NAME ?? ''
-const revalidateInterval = process.env.REVALIDATE_INTERVAL ?? 3600
+const gitAccessToken = process.env.NEXT_PUBLIC_GIT_ACCESS_TOKEN
+const owner = process.env.NEXT_PUBLIC_OWNER ?? ''
+const repo = process.env.NEXT_PUBLIC_REPO_NAME ?? ''
+const revalidateInterval = process.env.NEXT_PUBLIC_REVALIDATE_INTERVAL ?? 3600
 
 const octokit = new Octokit({
   auth: gitAccessToken,

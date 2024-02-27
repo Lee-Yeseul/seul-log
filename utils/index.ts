@@ -9,3 +9,27 @@ export const formatDateToLongString = (dateString: string) => {
 
   return new Intl.DateTimeFormat('en-US', options).format(date)
 }
+
+export const calculateTimeAgo = (dateString: string) => {
+  const millisecondsAgo = new Date().getTime() - new Date(dateString).getTime()
+  const secondsAgo = millisecondsAgo / 1000
+
+  switch (true) {
+    case secondsAgo < 60:
+      return `방금 전`
+    case secondsAgo < 60 * 60:
+      return `${Math.floor(secondsAgo / 60)}분 전`
+    case secondsAgo < 60 * 60 * 24:
+      return `${Math.floor(secondsAgo / 60 / 60)}시간 전`
+    case secondsAgo < 60 * 60 * 24 * 7:
+      return `${Math.floor(secondsAgo / 60 / 60 / 24)}일 전`
+    case secondsAgo < 60 * 60 * 24 * 7 * 4:
+      return `${Math.floor(secondsAgo / 60 / 60 / 24 / 7)}주 전`
+    case secondsAgo < 60 * 60 * 24 * 30:
+      return `${Math.floor(secondsAgo / 60 / 60 / 24 / 30)}개월 전`
+    case secondsAgo < 60 * 60 * 24 * 365:
+      return `${Math.floor(secondsAgo / 60 / 60 / 24 / 365)}년 전`
+    default:
+      return `${Math.floor(secondsAgo / 60 / 60 / 24 / 365)}년 전`
+  }
+}
