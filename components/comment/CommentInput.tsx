@@ -1,18 +1,19 @@
 'use client'
-import { createIssueComment } from '@/api/github-rest-api/issue'
-import { FormEvent, useContext, useState } from 'react'
-import { CommentContext } from '.'
 
-export default function CommentInput() {
-  const { issueNumber } = useContext(CommentContext)
+import { FormEvent, useState } from 'react'
+
+interface CommentInputProps {
+  createComment: (comment: string) => void
+}
+
+export default function CommentInput({ createComment }: CommentInputProps) {
   const [comment, setComment] = useState('')
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     try {
       e.preventDefault()
       if (!comment) return
-
-      await createIssueComment(issueNumber, comment)
+      createComment(comment)
       setComment('')
     } catch (err) {
       console.log(err)

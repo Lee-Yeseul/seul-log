@@ -1,4 +1,5 @@
 import { getRawPosts } from '@/api/github-rest-api'
+import CommentLoading from '@/components/comment/CommentLoading'
 import MarkdownContent from '@/components/common/MarkdownContent'
 import Tag from '@/components/common/Tag'
 import { formatDateToLongString } from '@/utils'
@@ -9,9 +10,13 @@ interface PostDetailProps {
   params: { path: string }
 }
 
-const DynamicCommentBox = dynamic(() => import('@/components/comment'), {
-  ssr: false,
-})
+const DynamicCommentBox = dynamic(
+  () => import('@/components/comment/CommentBox'),
+  {
+    ssr: false,
+    loading: () => <CommentLoading />,
+  },
+)
 
 export async function generateMetadata({ params: { path } }: PostDetailProps) {
   return {

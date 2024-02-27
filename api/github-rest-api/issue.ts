@@ -8,54 +8,76 @@ const octokit = new Octokit({
   auth: gitAccessToken,
 })
 export const getIssuesByIssueNumber = async (issue_number: number) => {
-  const { data } = await octokit.rest.issues.get({
-    owner,
-    repo,
-    issue_number,
-  })
-  return data
+  try {
+    const { data } = await octokit.rest.issues.get({
+      owner,
+      repo,
+      issue_number,
+    })
+    return data
+  } catch (err) {
+    console.log(err)
+  }
 }
 
 export const getIssueList = async () => {
-  const { data } = await octokit.rest.issues.listForRepo({
-    owner,
-    repo,
-  })
+  try {
+    const { data } = await octokit.rest.issues.listForRepo({
+      owner,
+      repo,
+    })
 
-  return data
+    return data
+  } catch (err) {
+    console.log(err)
+  }
 }
 
 export const getCommentListByIssueNumber = async (issue_number: number) => {
-  const { data } = await octokit.rest.issues.listComments({
-    owner,
-    repo,
-    issue_number,
-  })
+  try {
+    const { data } = await octokit.rest.issues.listComments({
+      owner,
+      repo,
+      issue_number,
+    })
 
-  const commentList = data.map(({ body, created_at }) => {
-    return { body, created_at }
-  })
-  return commentList
+    const commentList = data.filter(({ body }) => body !== undefined) as {
+      body: string
+      created_at: string
+    }[]
+
+    return commentList
+  } catch (err) {
+    console.log(err)
+  }
 }
 
 export const createIssue = async (title: string, body: string) => {
-  const { data } = await octokit.rest.issues.create({
-    owner,
-    repo,
-    title,
-    body,
-  })
-  return data
+  try {
+    const { data } = await octokit.rest.issues.create({
+      owner,
+      repo,
+      title,
+      body,
+    })
+    return data
+  } catch (err) {
+    console.log(err)
+  }
 }
 
 export const createIssueComment = async (
   issue_number: number,
   body: string,
 ) => {
-  await octokit.rest.issues.createComment({
-    owner,
-    repo,
-    issue_number,
-    body,
-  })
+  try {
+    await octokit.rest.issues.createComment({
+      owner,
+      repo,
+      issue_number,
+      body,
+    })
+  } catch (err) {
+    console.log(err)
+  }
 }
