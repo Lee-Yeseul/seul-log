@@ -45,7 +45,7 @@ export default async function Board({ sha, title }: BoardProps) {
             <h6 className="my-1 text-lg font-bold tracking-wide">
               {metaTitle}
             </h6>
-            <p className="text-sm text-gray-500">
+            <p className="h-10 text-sm text-gray-500">
               {summary ? summary : metaTitle}
             </p>
             <div className="mt-4 flex gap-2 text-xs font-bold">
