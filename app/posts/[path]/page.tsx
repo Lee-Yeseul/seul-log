@@ -47,7 +47,9 @@ export default async function Post({ params: { path } }: PostDetailProps) {
     <>
       <section className="flex min-h-[75vh] w-full flex-col items-center justify-center pt-10">
         <article className="sm:w-3/4 md:w-3/4 lg:w-3/5 xl:w-1/2">
-          <h2 className="text-4xl font-bold">{title}</h2>
+          <h2 className="text-4xl font-bold sm:text-2xl md:text-2xl lg:text-4xl xl:text-4xl">
+            {title}
+          </h2>
           <div className="mt-4 text-base font-medium text-gray-500">
             {formattedDate ?? ''}
           </div>
