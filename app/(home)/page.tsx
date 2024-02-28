@@ -3,6 +3,12 @@ import Board from '@/components/common/Board'
 
 export const metadata = {
   title: 'Home',
+  openGraph: {
+    description: '프론트엔드 개발자 SEUL의 블로그입니다.',
+    images: [
+      { url: 'https://i.imgur.com/dI5n9zc.png', width: 400, height: 300 },
+    ],
+  },
 }
 
 export default async function Home() {

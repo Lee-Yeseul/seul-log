@@ -6,16 +6,26 @@ import Footer from '@/components/layout/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
-const blogName = 'SEUL'
+const blogName = 'SEUL LOG'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://yeseul-blog.vercel.app/'),
   title: {
-    template: `%s | ${blogName} Log`,
-    default: `${blogName} Log`,
+    template: `%s | ${blogName}`,
+    default: `${blogName}`,
   },
   description: "frontend developer seul's blog",
   verification: { google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION },
   icons: '/favicon.ico',
+  openGraph: {
+    type: 'website',
+    title: {
+      template: `%s`,
+      default: `${blogName}`,
+    },
+    description: `%s`,
+    images: `%s`,
+  },
 }
 
 export default function RootLayout({

@@ -19,8 +19,18 @@ const DynamicCommentBox = dynamic(
 )
 
 export async function generateMetadata({ params: { path } }: PostDetailProps) {
+  const decodedPath = decodeURIComponent(path)
+  const postingData = await getRawPosts(`blog/${decodedPath}.md`)
+  const { data: metadata } = matter(postingData as unknown as string)
+  const { title, summary, thumbnail } = metadata
+
   return {
     title: path,
+    openGraph: {
+      title,
+      description: summary,
+      images: [{ url: thumbnail, width: 400, height: 300 }],
+    },
   }
 }
 

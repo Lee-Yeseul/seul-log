@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import matter from 'gray-matter'
-import testImage from '@/public/assets/images/default_image.png'
+import defaultImage from '@/public/assets/images/default_image.png'
 import Card from './Card'
 import { getPostBlobData } from '@/api/github-rest-api'
 import { formatDateToLongString } from '@/utils'
@@ -32,7 +32,7 @@ export default async function Board({ sha, title }: BoardProps) {
           <Card.Images>
             <div className="relative h-[25vh] w-full object-cover">
               <Image
-                src={thumbnail ? thumbnail : testImage}
+                src={thumbnail ? thumbnail : defaultImage}
                 fill
                 alt="thumbnail_image"
               />
