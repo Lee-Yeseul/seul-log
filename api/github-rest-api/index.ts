@@ -24,7 +24,7 @@ export const getRawPosts = async (path: string = 'blog') => {
     })
     return data
   } catch (err) {
-    console.log(err)
+    throw new Error(`Failed to get: ${err}`)
   }
 }
 
@@ -40,6 +40,6 @@ export const getPostBlobData = async (sha: string) => {
     })
     return data
   } catch (err) {
-    console.log(err)
+    throw new Error(`Failed to get: ${err}`)
   }
 }
