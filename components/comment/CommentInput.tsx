@@ -16,7 +16,7 @@ export default function CommentInput({ createComment }: CommentInputProps) {
       createComment(comment)
       setComment('')
     } catch (err) {
-      console.log(err)
+      throw new Error(`Failed to create: ${err}`)
     }
   }
   return (

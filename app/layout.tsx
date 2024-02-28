@@ -34,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="kor">
+    <html lang="ko">
       <body className={inter.className}>
         <Header />
         <main className="my-16">{children}</main>

@@ -16,7 +16,7 @@ export const getIssuesByIssueNumber = async (issue_number: number) => {
     })
     return data
   } catch (err) {
-    console.log(err)
+    throw new Error(`Failed to get: ${err}`)
   }
 }
 
@@ -29,7 +29,7 @@ export const getIssueList = async () => {
 
     return data
   } catch (err) {
-    console.log(err)
+    throw new Error(`Failed to get: ${err}`)
   }
 }
 
@@ -48,7 +48,7 @@ export const getCommentListByIssueNumber = async (issue_number: number) => {
 
     return commentList
   } catch (err) {
-    console.log(err)
+    throw new Error(`Failed to get: ${err}`)
   }
 }
 
@@ -62,7 +62,7 @@ export const createIssue = async (title: string, body: string) => {
     })
     return data
   } catch (err) {
-    console.log(err)
+    throw new Error(`Failed to create: ${err}`)
   }
 }
 
@@ -78,6 +78,6 @@ export const createIssueComment = async (
       body,
     })
   } catch (err) {
-    console.log(err)
+    throw new Error(`Failed to create: ${err}`)
   }
 }
