@@ -3,7 +3,6 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
-import Head from 'next/head'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,6 +14,8 @@ export const metadata: Metadata = {
     default: `${blogName} Log`,
   },
   description: "frontend developer seul's blog",
+  verification: { google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION },
+  icons: '/favicon.ico',
 }
 
 export default function RootLayout({
@@ -24,9 +25,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="kor">
-      <Head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-      </Head>
       <body className={inter.className}>
         <Header />
         <main className="my-16">{children}</main>
