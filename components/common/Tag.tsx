@@ -5,13 +5,13 @@ interface TagProps {
 
 export default function Tag({ value, index }: TagProps) {
   const tagPalette = [
-    'text-sky-500 bg-sky-100',
-    'text-indigo-500 bg-indigo-100',
-    'text-rose-500 bg-rose-100',
-    'text-blue-500 bg-blue-100',
-    'text-violet-500 bg-violet-100',
-    'text-red-500 bg-red-100',
-    'text-orange-500 bg-orange-100',
+    'text-sky-600 bg-sky-100',
+    'text-indigo-600 bg-indigo-100',
+    'text-rose-600 bg-rose-100',
+    'text-blue-600 bg-blue-100',
+    'text-violet-600 bg-violet-100',
+    'text-red-600 bg-red-100',
+    'text-orange-600 bg-orange-100',
   ]
 
   return (
