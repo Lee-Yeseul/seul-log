@@ -33,3 +33,13 @@ export const calculateTimeAgo = (dateString: string) => {
       return `${Math.floor(secondsAgo / 60 / 60 / 24 / 365)}년 전`
   }
 }
+
+export const addPrefixToTarget = (
+  url: string,
+  prefix: string,
+  targetString: string,
+) => {
+  const regex = new RegExp(`\\${targetString}$`)
+  const modifiedString = url.replace(regex, `${prefix}${targetString}`)
+  return modifiedString
+}

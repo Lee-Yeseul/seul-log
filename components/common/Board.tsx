@@ -4,7 +4,7 @@ import matter from 'gray-matter'
 import defaultImage from '@/public/assets/images/default_image.png'
 import Card from './Card'
 import { getPostBlobData } from '@/api/github-rest-api'
-import { formatDateToLongString } from '@/utils'
+import { addPrefixToTarget, formatDateToLongString } from '@/utils'
 import Tag from './Tag'
 
 interface BoardProps {
@@ -32,7 +32,11 @@ export default async function Board({ sha, title }: BoardProps) {
           <Card.Images>
             <div className="relative h-[25vh] w-full object-cover">
               <Image
-                src={thumbnail ? thumbnail : defaultImage}
+                src={
+                  thumbnail
+                    ? addPrefixToTarget(thumbnail, 'l', '.png')
+                    : defaultImage
+                }
                 fill
                 alt="thumbnail_image"
               />
