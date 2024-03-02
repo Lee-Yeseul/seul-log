@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## 🔗 Link
 
-☞ https://yeseul-portfolio.vercel.app/
+☞ https://yeseul-blog.vercel.app/
 
 ## 📖 서비스 소개
 
