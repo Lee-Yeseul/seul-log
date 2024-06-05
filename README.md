@@ -29,11 +29,13 @@ Obsidian + Github REST API + Next.js로 만든 블로그 서비스입니다.
 nvm 18버전 이상 사용이 권장됩니다.
 
 ```bash
+#install
+npm install
+
+# dev mode
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# production
+npm run build
+npm run preview
 ```
