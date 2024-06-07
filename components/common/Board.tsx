@@ -1,7 +1,5 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import matter from 'gray-matter'
-import defaultImage from '@/public/assets/images/default_image.png'
 import Card from './Card'
 import { getPostBlobData } from '@/api/github-rest-api'
 import { addPrefixToTarget, formatDateToLongString } from '@/utils'
@@ -31,14 +29,16 @@ export default async function Board({ sha, title }: BoardProps) {
         <Card className="bg-white">
           <Card.Images>
             <div className="relative h-[25vh] w-full object-cover">
-              <Image
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src={
                   thumbnail
                     ? addPrefixToTarget(thumbnail, 'l', '.png')
-                    : defaultImage
+                    : '/assets/images/default_image.png'
                 }
-                fill
                 alt="thumbnail_image"
+                className="h-full w-full object-fill"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
           </Card.Images>
