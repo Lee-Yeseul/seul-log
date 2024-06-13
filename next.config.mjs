@@ -4,7 +4,7 @@ const nextConfig = {
     return [
       {
         source: '/',
-        destination: '/pop-up',
+        destination: '/posts',
         permanent: true,
       },
     ]
