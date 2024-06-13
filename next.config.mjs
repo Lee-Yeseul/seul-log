@@ -1,5 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  redirects: async () => {
+    return [
+      {
+        source: '/',
+        destination: '/pop-up',
+        permanent: true,
+      },
+    ]
+  },
   reactStrictMode: true,
   webpack: (config) => {
     config.module.rules.push({
