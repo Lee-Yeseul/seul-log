@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://yeseul-blog.vercel.app/posts</loc>
+  <lastmod>2024-06-13T12:01:29+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://yeseul-blog.vercel.app/posts/8-image%20upload%20with%20S3%20presignedUrl</loc>
+  <lastmod>2024-06-13T12:01:29+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://yeseul-blog.vercel.app/posts/7-Deploying%20Serverless%20APIs%20with%20API%20Gateway%20and%20AWS%20Lambda</loc>
+  <lastmod>2024-06-13T12:01:29+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://yeseul-blog.vercel.app/posts/6-korean-typing-with-react</loc>
+  <lastmod>2024-06-13T12:01:29+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://yeseul-blog.vercel.app/posts/5-teo-sprint-14</loc>
+  <lastmod>2024-06-13T12:01:29+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://yeseul-blog.vercel.app/posts/4-frontend-developer-portfolio</loc>
+  <lastmod>2024-06-13T12:01:29+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://yeseul-blog.vercel.app/posts/3-search-engine-optimization-with-nextjs</loc>
+  <lastmod>2024-06-13T12:01:29+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://yeseul-blog.vercel.app/posts/2-about-git-merge-strategy</loc>
+  <lastmod>2024-06-13T12:01:29+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://yeseul-blog.vercel.app/posts/1-how-to-make-blog-by-obsidian&amp;git</loc>
+  <lastmod>2024-06-13T12:01:29+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
