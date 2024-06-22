@@ -46,12 +46,14 @@ export default async function Board({ sha, title }: BoardProps) {
             <div className="my-1 text-sm font-semibold text-gray-500">
               {formattedDate}
             </div>
-            <h6 className="my-1 text-lg font-bold tracking-wide">
-              {metaTitle}
-            </h6>
-            <p className="h-10 text-sm text-gray-500">
-              {summary ? summary : metaTitle}
-            </p>
+            <div className="">
+              <h2 className="my-1 text-lg font-bold tracking-wide">
+                {metaTitle}
+              </h2>
+              <p className="h-10 text-sm text-gray-500">
+                {summary ? summary : metaTitle}
+              </p>
+            </div>
             <div className="mt-4 flex gap-2 text-xs font-bold">
               {tags.map((value: string, index: number) => (
                 <Tag key={index} value={value} index={index} />

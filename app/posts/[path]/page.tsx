@@ -26,6 +26,10 @@ export async function generateMetadata({ params: { path } }: PostDetailProps) {
 
   return {
     title: path,
+    description: summary,
+    alternates: {
+      canonical: `/posts/${path}`,
+    },
     openGraph: {
       title,
       description: summary,

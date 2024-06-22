@@ -3,6 +3,9 @@ import Board from '@/components/common/Board'
 
 export const metadata = {
   title: 'Home',
+  alternates: {
+    canonical: `/posts`,
+  },
   openGraph: {
     description: '프론트엔드 개발자 SEUL의 블로그입니다.',
     images: [

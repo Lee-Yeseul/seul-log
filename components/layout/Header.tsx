@@ -6,7 +6,7 @@ export default function Header() {
     <header className="fixed left-0 top-0 z-10 h-16 w-full border-b-1 border-solid border-gray-300 bg-white">
       <div className="flex h-full items-center justify-between px-10">
         <Link href="/" className="text-xl font-bold">
-          SEUL Log
+          <h1>SEUL Log</h1>
         </Link>
         <Link
           href="https://yeseul-portfolio.vercel.app/"
